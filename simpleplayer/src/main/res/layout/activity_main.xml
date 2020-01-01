@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextureView
+        android:id="@+id/texture_view"
+        android:layout_width="413dp"
+        android:layout_height="434dp"
+        android:text="Hello World!"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="324dp"
+        android:layout_height="51dp"
+        android:layout_alignEnd="@+id/texture_view"
+        android:layout_alignBottom="@+id/texture_view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="376dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="7dp"
+        android:text="请输入拉流地址" />
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="430dp"
+        android:background="@color/white"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/et"
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:hint="输入内容"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn"
+                android:text="发送"
+                android:layout_margin="3dp"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/texture_view"
+        android:layout_alignEnd="@+id/texture_view"
+        android:layout_marginTop="376dp"
+        android:layout_marginEnd="6dp"
+        android:text="播放" />
+
+</RelativeLayout>

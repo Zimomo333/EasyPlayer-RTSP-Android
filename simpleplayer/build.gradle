@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+
+    defaultConfig {
+        applicationId "org.easydarwin.easyplayer"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'KEY', '"6D75724D7A4A36526D3432416A7770656F665677512B5A76636D63755A57467A65575268636E64706269356C59584E356347786865575679567778576F502F44346B566863336C4559584A33615735555A57467453584E55614756435A584E30497A49774D546B355A57467A65513D3D"'
+        buildConfigField 'String', 'RTSP_URL', '"rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov"'
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation project(':library')
+}
